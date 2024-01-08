@@ -57,3 +57,4 @@ console.log(resultSentenceMoon);
 //Typeof result of distToMoonInKM:            number
 //Typeof result of milesPerKM:                number
 //Determination will take 332.67857142857144 days to reach Mars.
+//Determination will take 0.5683628571428571 days to reach Earth's Moon.
