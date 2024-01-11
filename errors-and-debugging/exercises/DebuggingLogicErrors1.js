@@ -1,3 +1,14 @@
+//****************************************************************************************
+//
+//
+//    Filename:    DebuggingLogicErrors1.js
+//    Date:        10 January 2024
+//    Author:      Kyle McColgan
+//    Description: This program performs some basic JavaScript operations using conditionals.
+//
+//
+//****************************************************************************************
+
 // Run this sample code as-is and examine the output. 
 // Should the shuttle have launched? 
 // Did it?
@@ -16,9 +27,9 @@ if (fuelLevel >= 20000) {
    launchReady = false;
 }
 
-if (crewStatus && computerStatus === 'green'){
+if (crewStatus && computerStatus === 'green' && launchReady === true){
    console.log('Crew & computer cleared.');
-   launchReady = true;
+   //launchReady = true; //This line needs moved into the conditional check above
 } else {
    console.log('WARNING: Crew or computer not ready!');
    launchReady = false;
@@ -30,3 +41,20 @@ if (launchReady) {
 } else {
    console.log('Launch scrubbed.');
 }
+
+//****************************************************************************************
+
+/*
+
+node DebuggingLogicErrors1.js
+WARNING: Insufficient fuel!
+Crew & computer cleared.
+10, 9, 8, 7, 6, 5, 4, 3, 2, 1...
+Liftoff!
+
+node DebuggingLogicErrors1.js
+WARNING: Insufficient fuel!
+WARNING: Crew or computer not ready!
+Launch scrubbed.
+
+*/

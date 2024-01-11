@@ -1,3 +1,14 @@
+//****************************************************************************************
+//
+//
+//    Filename:    DebuggingLogicErrors2.js
+//    Date:        10 January 2024
+//    Author:      Kyle McColgan
+//    Description: This program performs some basic JavaScript operations using conditionals.
+//
+//
+//****************************************************************************************
+
 // Let’s break the code down into smaller chunks.
 // Consider the first if/else block below. 
 // Add console.log(launchReady) after this block, then run the program.
@@ -17,6 +28,8 @@ if (fuelLevel >= 20000) {
    launchReady = false;
 }
 
+console.log(launchReady); //Yes launchReady should be false after the check which it is false at this point. The program is behaving as expected. No errors have occured yet.
+
 // if (crewStatus && computerStatus === 'green'){
 //    console.log('Crew & computer cleared.');
 //    launchReady = true;
@@ -31,3 +44,13 @@ if (fuelLevel >= 20000) {
 // } else {
 //    console.log('Launch scrubbed.');
 // }
+
+//****************************************************************************************
+
+/*
+
+node DebuggingLogicErrors2.js
+WARNING: Insufficient fuel!
+false
+
+/*
