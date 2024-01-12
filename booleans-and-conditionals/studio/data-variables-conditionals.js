@@ -1,3 +1,14 @@
+//****************************************************************************************
+//
+//
+//    Filename:    data-variables-conditionals.js
+//    Date:        11 January 2024
+//    Author:      Kyle McColgan
+//    Description: This program performs a test launch using conditionals.
+//
+//
+//****************************************************************************************
+
 // Initialize Variables below
 let date = "Monday 2019-03-18";
 let time = "10:05:35 AM";
@@ -72,8 +83,11 @@ if (preparedForLiftOff == true)
     console.log("Have a safe trip astronauts!");
 }
 
+//****************************************************************************************
+
 /*
- All systems are a go! Initialting space shuttle launch sequence.
+
+All systems are a go! Initialting space shuttle launch sequence.
 ----------------------------------------------------------------
 Date:  Monday 2019-03-18
 Time:  10:05:35 AM
@@ -86,4 +100,5 @@ Fuel Temperature:  -225 C
 Weather Status:  clear
 ----------------------------------------------------------------
 Have a safe trip astronauts!
+
 */
