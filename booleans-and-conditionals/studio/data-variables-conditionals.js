@@ -69,7 +69,7 @@ if ( weatherStatus != 'clear')
 if (preparedForLiftOff == true)
 {
     console.log("All systems are a go! Initialting space shuttle launch sequence.");
-    console.log("----------------------------------------------------------------")
+    console.log("----------------------------------------------------------------");
     console.log("Date: ", date);
     console.log("Time: ", time);
     console.log("Astronaut Count: ", astronautCount);
@@ -79,7 +79,7 @@ if (preparedForLiftOff == true)
     console.log("Total Mass: ", totalMassKg, " kg");
     console.log("Fuel Temperature: ", fuelTempCelsius, "C");
     console.log("Weather Status: ", weatherStatus);
-    console.log("----------------------------------------------------------------")
+    console.log("----------------------------------------------------------------");
     console.log("Have a safe trip astronauts!");
 }
 
