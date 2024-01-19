@@ -1,3 +1,14 @@
+//****************************************************************************************
+//
+//
+//    Filename:    multi-dimensional-arrays.js
+//    Date:        18 January 2024
+//    Author:      Kyle McColgan
+//    Description: This program tests converting between Arrays and Strings.
+//
+//
+//****************************************************************************************
+
 const input = require('readline-sync');
 
 let food = "water bottles,meal packs,snacks,chocolate";
@@ -50,3 +61,20 @@ else
 console.log(`Selcted cabinet contents: ${cargoHoldArr[numCabinet]}`);
 
 //5) Modify the code to query the user for BOTH a cabinet in cargoHold AND a particular item. Use the 'includes' method to check if the cabinet contains the selected item, then print “Cabinet ____ DOES/DOES NOT contain ____.”
+
+//****************************************************************************************
+
+/*
+node multi-dimensional-arrays.js
+Current cargo hold:  [
+  [ 'chocolate', 'meal packs', 'snacks', 'water bottles' ],
+  [ 'jet packs', 'space suits', 'thermal detonators', 'tool belts' ],
+  [ 'alien eggs', 'cats', 'moose', 'parrots' ],
+  [ 'alarm clocks', 'blankets', 'eyepatches', 'pillows' ]
+]
+Please enter the cabinet number (0-3): 0
+Error: cabinet number is too low.
+Please enter the name of the desired item: water bottles
+Cabinet 0 DOES contain water bottles
+Selcted cabinet contents: chocolate,meal packs,snacks,water bottles
+*/
