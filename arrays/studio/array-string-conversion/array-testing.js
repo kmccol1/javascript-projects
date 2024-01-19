@@ -23,7 +23,9 @@ function reverseCommas() {
 	let output = "";
 	//TODO: 2. write the code required for this step
 
-	if (protoArray1.includes(",") === true)
+	check = protoArray1.includes(",");
+
+	if ( check === true)
 	{
 		output = protoArray1.split(",").reverse().join(",");
 	}
@@ -40,11 +42,12 @@ function semiDash() {
 	let output;
 //TODO: write the code required for this step
 
-	if (protoArray2.includes(";") === true)
+	check = protoArray2.includes(";");
+
+	if ( check === true)
 	{
 		output = protoArray2.split(";").sort().join("-");
 	}
-
   
 	return output;
 }
@@ -55,7 +58,9 @@ function reverseSpaces() {
 	let output;
   //TODO: write the code required for this step
 
-	if (protoArray3.includes(" ") === true)
+	check = protoArray3.includes(" ");
+
+	if (check === true)
 	{
 		output = protoArray3.split(" ").sort().reverse().join(" ");
 	}
@@ -69,7 +74,9 @@ function commaSpace() {
 	let output;
 	//TODO: write the code required for this step
 
-	if (protoArray4.includes(", ") === true)
+	check = protoArray4.includes(", ");
+
+	if (check === true)
 	{
 		output = protoArray4.split(", ").reverse().join(",").trim();
 	}
