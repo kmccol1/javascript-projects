@@ -2,7 +2,7 @@
 //
 //
 //    Filename:    part-1.js
-//    Date:        8 January 2024
+//    Date:        22 January 2024
 //    Author:      Kyle McColgan
 //    Description: This program performs some basic JavaScript operations using conditionals.
 //
@@ -30,6 +30,5 @@ if (engineIndicatorLight === "green") {
    console.log("engines are off");
 }
 //****************************************************************************************
-//engines are off
 
-console.log(4=="4");
+//engines are off
