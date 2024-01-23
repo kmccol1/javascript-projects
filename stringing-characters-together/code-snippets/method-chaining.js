@@ -7,5 +7,9 @@ console.log(word.toUpperCase());
 
 //What does ``word.slice(4).toUpperCase()`` return?
 
+console.log(word.slice(4).toUpperCase());
 
 //Experiment with other combinations (chains) of string methods.
+
+console.log(word.trim().toUpperCase());
+console.log(word.toUpperCase().replace('S', 'X').slice(2));
