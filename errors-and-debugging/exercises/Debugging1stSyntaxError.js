@@ -26,6 +26,7 @@ if (fuelLevel >= 20000) { //This line was missing a close parenthesis character 
 //****************************************************************************************
 
 /*
+
 node Debugging1stSyntaxError.js
 /js-projects-repo/javascript-projects/errors-and-debugging/exercises/Debugging1stSyntaxError.js:18
 if (fuelLevel >= 20000 {
