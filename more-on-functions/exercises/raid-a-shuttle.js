@@ -1,3 +1,14 @@
+//****************************************************************************************
+//
+//
+//    Filename:    raid-a-shuttle.js
+//    Date:        24 January 2024
+//    Author:      Kyle McColgan
+//    Description: This program implements some custom functions for practice purposes.
+//
+//
+//****************************************************************************************
+
 function checkFuel(level) {
   if (level > 100000){
     return 'green';
@@ -24,6 +35,59 @@ let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold
 console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
 
+let tempVar = function (fuelLevel)
+{
+    let result = 0;
+    //let flag = true;
+    //let status;
+
+    status = checkFuel(fuelLevel);
+
+    if ( status === "green")
+    {
+        while(checkFuel(fuelLevel-1) != "yellow")
+        {
+            fuelLevel -= 1;
+            result += 1;
+        }
+    }
+    else if ( status === "yellow")
+    {
+        while(checkFuel(fuelLevel-1) != "red")
+        {
+            fuelLevel -= 1;
+            result += 1;
+        }
+    }
+    else
+    {
+        while(checkFuel(fuelLevel-1) != 0)
+        {
+            fuelLevel -= 1;
+            result += 1;
+        }
+    }
+
+    return result;
+}
+
+console.log(tempVar(fuelLevel));
+
+let launchCode = function(arr)
+{
+    let stash = [];
+
+    stash.push(arr.splice(1, 1, "empty water bottle"));
+    stash.push(arr.splice(4, 1, "empty candy wrapper"));
+
+    //console.log(stash);
+
+    return stash;
+}
+
+launchCode(cargoHold);
+
+/*
 /* Steal some fuel from the shuttle:
  * /
  
@@ -54,4 +118,4 @@ console.log("Hold status: " + holdStatus(cargoHold));
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
-
+*/
