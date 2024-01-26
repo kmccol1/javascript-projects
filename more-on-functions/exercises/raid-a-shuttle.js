@@ -35,6 +35,8 @@ let cargoHold = ['meal kits', 'space suits', 'first-aid kit', 'satellite', 'gold
 console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
 
+//****************************************************************************************
+
 let tempVar = function (fuelLevel)
 {
     let result = 0;
@@ -71,21 +73,38 @@ let tempVar = function (fuelLevel)
     return result;
 }
 
-console.log(tempVar(fuelLevel));
+//****************************************************************************************
 
 let launchCode = function(arr)
 {
     let stash = [];
 
     stash.push(arr.splice(1, 1, "empty water bottle"));
-    stash.push(arr.splice(4, 1, "empty candy wrapper"));
 
-    //console.log(stash);
+    stash.push(arr.splice(4, 1, "empty candy wrapper"));
 
     return stash;
 }
 
-launchCode(cargoHold);
+//****************************************************************************************
+
+let irs = function (fuelLevel, cargoHold)
+{
+    let fuelStolen;
+    let cargoStolen;
+
+    fuelStolen = tempVar(fuelLevel);
+    cargoStolen = launchCode(cargoHold);
+
+    return `Raided ${fuelStolen} kg of fuel from the tanks, and stole ${cargoStolen[0]} and ${cargoStolen[1]} from the cargo hold.`;
+}
+//****************************************************************************************
+
+//console.log(tempVar(fuelLevel));
+//launchCode(cargoHold);
+console.log(irs(fuelLevel, cargoHold));
+
+//****************************************************************************************
 
 /*
 /* Steal some fuel from the shuttle:
@@ -118,4 +137,12 @@ launchCode(cargoHold);
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
+*/
+
+//****************************************************************************************
+
+/*
+Fuel level: green
+Hold status: Full
+Raided 99999 kg of fuel from the tanks, and stole space suits and gold from the cargo hold.
 */
