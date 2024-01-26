@@ -1,3 +1,14 @@
+//****************************************************************************************
+//
+//
+//    Filename:    studio-functions.js
+//    Date:        25 January 2024
+//    Author:      Kyle McColgan
+//    Description: This program implements some custom functions for practice purposes.
+//
+//
+//****************************************************************************************
+
 //We want to COMPLETELY reverse an array by flipping the order of the entries AND flipping the order of characters in each element.
 
 // Part One: Reverse Characters
@@ -8,6 +19,33 @@
 // 4. Below the function, define and initialize a variable to hold a string.
 // 5. Use console.log(reverseCharacters(myVariableName)); to call the function and verify that it correctly reverses the characters in the string.
 // 6. Optional: Use method chaining to reduce the lines of code within the function.
+
+//****************************************************************************************
+
+function reverseCharacters(str)
+{
+    let arr;
+
+    if ( typeof str == "string")
+    {
+        arr = str.split('').reverse().join("");
+    }
+    else if (typeof str == "number")
+    {
+        arr = Number(String(str).split('').reverse().join(""));
+    }
+
+    return arr;
+}
+
+//****************************************************************************************
+
+let myStr = "to hold a string.";
+let myNum = 12345;
+console.log(reverseCharacters(myStr));
+console.log(reverseCharacters(myNum));
+
+//****************************************************************************************
 
 // Part Two: Reverse Digits
 
@@ -26,9 +64,34 @@
 // 5. Return the final, reversed array.
 // 6. Be sure to print the results from each test case in order to verify your code.
 
+//****************************************************************************************
+
 let arrayTest1 = ['apple', 'potato', 'Capitalized Words'];
 let arrayTest2 = [123, 8897, 42, 1168, 8675309];
 let arrayTest3 = ['hello', 'world', 123, 'orange'];
+
+//****************************************************************************************
+
+function completeReversal(arr)
+{
+    let result = [];
+
+    for ( let i = 0; i < arr.length; i ++)
+    {
+
+        result.push(reverseCharacters(arr[i]));
+    }
+
+    return result;
+}
+
+//****************************************************************************************
+
+console.log(completeReversal(arrayTest1));
+console.log(completeReversal(arrayTest2));
+console.log(completeReversal(arrayTest3));
+
+//****************************************************************************************
 
 // Bonus Missions
 
@@ -37,10 +100,33 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 // 3. Retrieve only the first 3 characters from strings with lengths larger than 3.
 // 4. Use a template literal to return the phrase We put the '___' in '___'. Fill the first blank with the modified string, and fill the second blank with the original string.
 
+//****************************************************************************************
+
+function funPhrase (testStr)
+{
+    let modifiedStr;
+
+    if (testStr.length > 3)
+    {
+        modifiedStr = testStr.slice(0,3);
+    }
+    else
+    {
+        modifiedStr = testStr.slice(testStr.length);
+    }
+
+    return `We put the ${modifiedStr} in ${testStr}`;
+}
+
+//****************************************************************************************
+
 // Test Function
 
 // 1. Outside of the function, define the variable str and initialize it with a string (e.g. 'Functions rock!').
 // 2. Call your function and print the returned phrase.
+
+let str = "Functions rock!";
+console.log(funPhrase(str));
 
 // Area of rectangle equal to length x width
 
@@ -49,3 +135,33 @@ let arrayTest3 = ['hello', 'world', 123, 'orange'];
 // 3. Call your area function by passing in two arguments - the length and width.
 // 4. If only one argument is passed to the function, then the shape is a square. Modify your code to deal with this case.
 // 5. Use a template literal to print, “The area is ____ cm^2.”
+
+//****************************************************************************************
+
+function getArea(length, width = length)
+{
+    let result;
+
+    result = length * width;
+
+    console.log(`The area is ${result} cm^2`);
+
+    return result;
+}
+
+//****************************************************************************************
+
+getArea(5);
+
+//****************************************************************************************
+
+/*
+node studio-functions.js
+.gnirts a dloh ot
+54321
+[ 'elppa', 'otatop', 'sdroW dezilatipaC' ]
+[ 321, 7988, 24, 8611, 9035768 ]
+[ 'olleh', 'dlrow', 321, 'egnaro' ]
+We put the Fun in Functions rock!
+The area is 25 cm^2
+*/
