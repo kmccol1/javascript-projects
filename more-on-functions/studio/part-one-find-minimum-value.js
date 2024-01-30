@@ -34,3 +34,12 @@ let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
 console.log(findMin(nums1));
 console.log(findMin(nums2));
 console.log(findMin(nums3));
+
+//****************************************************************************************
+
+/*
+more-on-functions/studio> node part-one-find-minimum-value.js
+2
+-44
+-3.3
+*/
