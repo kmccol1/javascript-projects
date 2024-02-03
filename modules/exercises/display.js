@@ -1,3 +1,12 @@
+//****************************************************************************************
+//
+//    Filename:    display.js
+//    Date:        2 February 2024
+//    Author:      Kyle McColgan
+//    Description: This program displays students' test scores using console output.
+//
+//****************************************************************************************
+
 //TODO: Export ONLY the printAll function.
 
 function printAll(names, tests, scores){
@@ -19,6 +28,8 @@ function printAll(names, tests, scores){
   return;
 }
 
+//****************************************************************************************
+
 function printStudentScores(index,students,tests,scores){
   console.log(`Test results for ${students[index]}:`);
   for (let i = 0; i<tests.length; i++){
@@ -27,6 +38,8 @@ function printStudentScores(index,students,tests,scores){
   return;
 }
 
+//****************************************************************************************
+
 function printTestScores(index,test,students,scores){
   console.log(`Class results for ${test} test:`);
   for (let i = 0; i<students.length; i++){
@@ -34,3 +47,7 @@ function printTestScores(index,test,students,scores){
   }
   return;
 }
+
+//****************************************************************************************
+
+module.exports = {printAll:printAll}

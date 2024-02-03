@@ -1,3 +1,12 @@
+//****************************************************************************************
+//
+//    Filename:    averages.js
+//    Date:        2 February 2024
+//    Author:      Kyle McColgan
+//    Description: This program calculates the average test scores for students.
+//
+//****************************************************************************************
+
 function averageForStudent(nameIndex,scores){
   let sum = 0;
   for (let i=0; i<scores.length; i++){
@@ -6,6 +15,8 @@ function averageForStudent(nameIndex,scores){
   let average = sum/scores[nameIndex].length;
   return average;
 }
+
+//****************************************************************************************
 
 function averageForTest(testIndex,scores){
   let sum = 0;
@@ -16,4 +27,8 @@ function averageForTest(testIndex,scores){
   return average;
 }
 
+//****************************************************************************************
+
 //TODO: Export all functions within an object.
+
+module.exports = {averageForStudent:averageForStudent, averageForTest:averageForTest}
