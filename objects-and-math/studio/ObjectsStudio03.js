@@ -45,13 +45,13 @@ function fuelRequired(crewArr)
         }
     }
 
-    //totalMass = crewMass + rocketMass;
+    totalMass = crewMass + rocketMass;
 
-    fuelAmt = totalMass * 9.5;
+    fuelAmt = Math.ceil(totalMass * 9.5);
 
     console.log(`The mission has a launch mass of ${totalMass} kg and requires ${fuelAmt} kg of fuel.`);
 
-    return Math.ceil(fuelAmt);
+    return fuelAmt;
 }
 
 //****************************************************************************************
@@ -66,6 +66,9 @@ let candidateA = {
    'o2Used':function(hrs){return 0.035*hrs},
    'astronautID':414
  };
+
+//****************************************************************************************
+
 let candidateB = {
     'name':'Lassie',
     'species':'dog',
@@ -73,6 +76,9 @@ let candidateB = {
     'o2Used':function(hrs){return 0.030*hrs},
     'astronautID':503
 };
+
+//****************************************************************************************
+
 let candidateC = {
     'name':'Jonsey',
     'species':'cat',
@@ -80,6 +86,9 @@ let candidateC = {
     'o2Used':function(hrs){return 0.022*hrs},
     'astronautID':796
 };
+
+//****************************************************************************************
+
 let candidateD = {
     'name':'Paddington',
     'species':'bear',
@@ -87,6 +96,9 @@ let candidateD = {
     'o2Used':function(hrs){return 0.047*hrs},
     'astronautID':291
 };
+
+//****************************************************************************************
+
 let candidateE = {
     'name':'Pete',
     'species':'tortoise',
@@ -94,6 +106,9 @@ let candidateE = {
     'o2Used':function(hrs){return 0.010*hrs},
     'astronautID':599
 };
+
+//****************************************************************************************
+
 let candidateF = {
     'name':'Hugs',
     'species':'ball python',
@@ -102,11 +117,18 @@ let candidateF = {
     'astronautID':890
 };
 
-let crew = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF];
+//****************************************************************************************
 
-console.log(fuelRequired(crew));
+let crew = [candidateA,candidateB,candidateC,candidateD,candidateE,candidateF];
+console.log("Printing the launch mass and fuel mass required for the mission...")
+let amountOfFuel = fuelRequired(crew);
+console.log(`The mission requires ${amountOfFuel} kg of fuel for success.`);
+//****************************************************************************************
 
 /*
-
+studio> node ObjectsStudio03.js
+Printing the launch mass and fuel mass required for the mission...
+The mission has a launch mass of 75800 kg and requires 720100 kg of fuel.
+The mission requires 720100 kg of fuel for success.
 */
  
