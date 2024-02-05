@@ -3,7 +3,7 @@
 //    Filename:    processor.js
 //    Date:        4 February 2024
 //    Author:      Kyle McColgan
-//    Description: This program tests the function isPalindrome().
+//    Description: This program processes transmissions from the Voyager1 space probe.
 //
 //****************************************************************************************
 
