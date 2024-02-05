@@ -1,3 +1,12 @@
+//****************************************************************************************
+//
+//    Filename:    checkFive.js
+//    Date:        4 February 2024
+//    Author:      Kyle McColgan
+//    Description: This program uses a function to check if a number is less than five.
+//
+//****************************************************************************************
+
 function checkFive(num){
    let result = '';
    if (num < 5){
@@ -9,3 +18,9 @@ function checkFive(num){
    }
    return result;
  }
+
+//****************************************************************************************
+
+module.exports = checkFive;
+
+//****************************************************************************************
